@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+class person
+{
+	public:
+		string name;
+		int age;
+		void set()
+		{
+			cout<<"enter the age and name"<<endl;
+			cin>>age>>name;
+			
+		}
+};
+class student:public person
+{
+	public:
+		int id;
+		string department;
+		void set2(int i,string d)
+		{
+			id=i;
+			department=d;
+		}
+		void display()
+		{
+			cout<<"name"<<name<<endl;
+			cout<<"age"<<age<<endl;
+			cout<<"id"<<id<<endl;
+			cout<<"department"<<department<<endl;
+			
+		}
+};
+int main()
+{
+
+student s1;
+s1.set();
+s1.set2(1661,"ai");
+s1.display();
+return 0;
+}
